@@ -19,6 +19,11 @@ master.welcome.text = \
 	Welcome to Acme Jobs, your work mate! It does not matter whether you are \
 	an employer or a worker: our system will bring you the opportunities you \
 	are seeking for.  We wish you great professional achievements!
+	
+# master.menu.new #######################################################
+
+master.menu.new = New functionality
+master.menu.new.react = New front-end
 
 # master.menu #################################################################
 

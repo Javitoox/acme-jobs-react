@@ -18,6 +18,10 @@
 
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
+		<acme:menu-option code="master.menu.new">
+			<acme:menu-suboption code="master.menu.new.react" action="${baseUrl}"/>
+		</acme:menu-option>
+	
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.all-jobs" action="/anonymous/job/list"/>
 			<acme:menu-separator/>

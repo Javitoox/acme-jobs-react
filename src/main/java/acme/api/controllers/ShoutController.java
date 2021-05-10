@@ -6,15 +6,17 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import acme.api.services.ShoutService;
+import acme.framework.controllers.MasterController;
 
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = MasterController.BASE_URL)
 @RestController
-@RequestMapping("/shout")
+@RequestMapping("/api/shout")
 public class ShoutController implements ApplicationContextAware {
 
 	// Internal state ---------------------------------------------------------
