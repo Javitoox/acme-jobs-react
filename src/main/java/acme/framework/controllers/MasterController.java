@@ -69,7 +69,6 @@ public class MasterController implements ApplicationContextAware {
 		ModelAndView result;
 
 		result = new ModelAndView("master/welcome");
-		result.addObject("baseUrl", MasterController.BASE_URL);
 
 		return result;
 	}
