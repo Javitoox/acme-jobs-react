@@ -1,5 +1,6 @@
 package acme.api.services;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class ShoutService {
 	@Transactional(readOnly = true)
 	public List<Shout> getAll() throws DataAccessException {
 		return this.repository.findAllShouts();
+	}
+	
+	@Transactional(readOnly = false)
+	public void save(final Shout shout) throws DataAccessException {
+		shout.setMoment(new Date());
+		this.repository.save(shout);
 	}
 
 }
