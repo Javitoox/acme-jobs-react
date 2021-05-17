@@ -58,7 +58,7 @@ public class ShoutController implements ApplicationContextAware {
 			if (result.hasErrors()) {
 				errors.addAll(result.getFieldErrors());
 			}
-			return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<>(errors, HttpStatus.NON_AUTHORITATIVE_INFORMATION);
 		} else {
 			this.shoutService.save(shout);
 			return new ResponseEntity<>("Successful creation", HttpStatus.CREATED);
