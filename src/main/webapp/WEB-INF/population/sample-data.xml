@@ -49,6 +49,48 @@
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="author" value="Javi Martínez"/>
+		<property name="text" value="I am working"/>
+		<property name="moment" value="2021/05/25 2:30"/>
+		<property name="info" value="https://ev.us.es/"/>
+	</bean>
+	
+	<bean id="shout06" class="acme.entities.shouts.Shout">
+		<property name="author" value="Andrés Rico"/>
+		<property name="text" value="I want to be fitness"/>
+		<property name="moment" value="2021/05/28 2:30"/>
+		<property name="info" value="https://www.netflix.com/"/>
+	</bean>
+	
+	<bean id="shout07" class="acme.entities.shouts.Shout">
+		<property name="author" value="The Josemix"/>
+		<property name="text" value="Recording a film"/>
+		<property name="moment" value="2021/05/15 13:15"/>
+		<property name="info" value="https://esports.as.com/"/>
+	</bean>
+	
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="author" value="Steve Jobs"/>
+		<property name="text" value="Programming..."/>
+		<property name="moment" value="2021/04/15 8:15"/>
+		<property name="info" value="https://www.apple.com/"/>
+	</bean>
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="author" value="David Broncano"/>
+		<property name="text" value="Hello! How much money do you have?"/>
+		<property name="moment" value="2021/05/05 18:45"/>
+		<property name="info" value="https://www.youtube.com/channel/UCvosUrZ7hXpzAyobhfztg4w"/>
+	</bean>
+	
+	<bean id="shout10" class="acme.entities.shouts.Shout">
+		<property name="author" value="Juan Alberto"/>
+		<property name="text" value="Are you a twitch?"/>
+		<property name="moment" value="2021/05/12 14:10"/>
+		<property name="info" value="https://www.youtube.com/user/CameraCafe100"/>
+	</bean>
+	
 	<!-- Announcements-->
 	
 	<bean id="announcement01" class="acme.entities.announcements.Announcement">
