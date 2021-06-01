@@ -25,21 +25,24 @@
 		<property name="moment" value="2021/02/13 19:39"/>
 		<property name="author" value="John Doe"/>
 		<property name="text" value="I'm happy!"/>
-		<property name="info"><null/></property>	
+		<property name="info"><null/></property>
+		<property name="budget" value="100.00"/>
 	</bean>
 	
 	<bean id="shout02" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2019/08/09 15:55"/>
 		<property name="author" value="Jane Doe"/>
 		<property name="text" value="I'm the master of my room!"/>
-		<property name="info" value="http://www.example.org"/>		
+		<property name="info" value="http://www.example.org"/>
+		<property name="budget" value="120.00"/>		
 	</bean>
 	
 	<bean id="shout03" class="acme.entities.shouts.Shout">
 		<property name="moment" value="2020/09/07 00:00"/>
 		<property name="author" value="Foo Bar"/>
 		<property name="text" value="Just turning 50!"/>
-		<property name="info" value="http://happybirthday.com"/>		
+		<property name="info" value="http://happybirthday.com"/>
+		<property name="budget" value="20.00"/>		
 	</bean>
 	
 	<bean id="shout04" class="acme.entities.shouts.Shout">
@@ -47,6 +50,7 @@
 		<property name="text" value="Woa! This app's so cool!"/>
 		<property name="moment" value="2021/02/13 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
+		<property name="budget" value="1.00"/>
 	</bean>
 	
 	<bean id="shout05" class="acme.entities.shouts.Shout">
@@ -54,6 +58,7 @@
 		<property name="text" value="I am working"/>
 		<property name="moment" value="2021/05/25 2:30"/>
 		<property name="info" value="https://ev.us.es/"/>
+		<property name="budget" value="90.70"/>
 	</bean>
 	
 	<bean id="shout06" class="acme.entities.shouts.Shout">
@@ -61,6 +66,7 @@
 		<property name="text" value="I want to be fitness"/>
 		<property name="moment" value="2021/05/28 2:30"/>
 		<property name="info" value="https://www.netflix.com/"/>
+		<property name="budget" value="500.00"/>
 	</bean>
 	
 	<bean id="shout07" class="acme.entities.shouts.Shout">
@@ -68,6 +74,7 @@
 		<property name="text" value="Recording a film"/>
 		<property name="moment" value="2021/05/15 13:15"/>
 		<property name="info" value="https://esports.as.com/"/>
+		<property name="budget" value="600.00"/>
 	</bean>
 	
 	<bean id="shout08" class="acme.entities.shouts.Shout">
@@ -75,20 +82,23 @@
 		<property name="text" value="Programming..."/>
 		<property name="moment" value="2021/04/15 8:15"/>
 		<property name="info" value="https://www.apple.com/"/>
+		<property name="budget" value="1000.50"/>
 	</bean>
 	
 	<bean id="shout09" class="acme.entities.shouts.Shout">
 		<property name="author" value="David Broncano"/>
 		<property name="text" value="Hello! How much money do you have?"/>
 		<property name="moment" value="2021/05/05 18:45"/>
-		<property name="info" value="https://www.youtube.com/channel/UCvosUrZ7hXpzAyobhfztg4w"/>
+		<property name="info"><null/></property>
+		<property name="budget" value="12.35"/>
 	</bean>
 	
 	<bean id="shout10" class="acme.entities.shouts.Shout">
 		<property name="author" value="Juan Alberto"/>
 		<property name="text" value="Are you a twitch?"/>
 		<property name="moment" value="2021/05/12 14:10"/>
-		<property name="info" value="https://www.youtube.com/user/CameraCafe100"/>
+		<property name="info"><null/></property>
+		<property name="budget" value="10.05"/>
 	</bean>
 	
 	<!-- Announcements-->

@@ -56,7 +56,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "info", "budget");
 	}
 
 	@Override
@@ -73,6 +73,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
 		result.setInfo("http://example.org");
+		result.setBudget(0.);
 
 		return result;
 	}
