@@ -1,4 +1,4 @@
-package acme.api.services;
+package acme.features.api.anonymous.shout;
 
 import java.util.Date;
 import java.util.List;
@@ -8,16 +8,15 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import acme.api.repositories.ShoutRepository;
 import acme.entities.shouts.Shout;
 
 @Service
-public class ShoutService {
+public class ApiAnonymousShoutService {
 	
-	private final ShoutRepository repository;
+	private final ApiAnonymousShoutRepository repository;
 
 	@Autowired
-	public ShoutService(final ShoutRepository repository) {
+	public ApiAnonymousShoutService(final ApiAnonymousShoutRepository repository) {
 		this.repository = repository;
 	}
 

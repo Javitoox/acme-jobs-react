@@ -1,4 +1,4 @@
-package acme.api.controllers;
+package acme.features.api.anonymous.shout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,21 +21,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import acme.api.services.ShoutService;
 import acme.entities.shouts.Shout;
 import acme.framework.controllers.MasterController;
 
 @CrossOrigin(origins = MasterController.BASE_URL)
 @RestController
-@RequestMapping("/api/shout")
-public class ShoutController implements ApplicationContextAware {
+@RequestMapping("/api/anonymous/shout/")
+public class ApiAnonymousShoutController implements ApplicationContextAware {
 
 	// Internal state ---------------------------------------------------------
 
 	protected ConfigurableApplicationContext context;
 	
 	@Autowired
-	protected ShoutService	shoutService;
+	protected ApiAnonymousShoutService	shoutService;
 
 	// ApplicationContextAware interface --------------------------------------
 
@@ -46,7 +45,7 @@ public class ShoutController implements ApplicationContextAware {
 		this.context = (ConfigurableApplicationContext) context;
 	}
 
-	@GetMapping
+	@GetMapping("/list")
 	public ResponseEntity<?> list() {
 		return ResponseEntity.ok(this.shoutService.getAll());
 	}
