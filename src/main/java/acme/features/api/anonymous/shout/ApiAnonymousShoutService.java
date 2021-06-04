@@ -4,14 +4,13 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import acme.entities.shouts.Shout;
+import acme.framework.services.AbstractRestService;
 
 @Service
-public class ApiAnonymousShoutService {
+public class ApiAnonymousShoutService implements AbstractRestService<Shout>{
 	
 	private final ApiAnonymousShoutRepository repository;
 
@@ -20,13 +19,13 @@ public class ApiAnonymousShoutService {
 		this.repository = repository;
 	}
 
-	@Transactional(readOnly = true)
-	public List<Shout> getAll() throws DataAccessException {
+	@Override
+	public List<Shout> getAll() {
 		return this.repository.findAllShouts();
 	}
 	
-	@Transactional(readOnly = false)
-	public void save(final Shout shout) throws DataAccessException {
+	@Override
+	public void save(final Shout shout) {
 		shout.setMoment(new Date());
 		this.repository.save(shout);
 	}
