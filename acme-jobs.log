@@ -1,0 +1,169 @@
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-T3O143G with PID 4112 (C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes started by Javi Toox in C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.968 seconds (JVM running for 5.331)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on DESKTOP-T3O143G with PID 5280 (C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes started by Javi Toox in C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 4.372 seconds (JVM running for 4.728)
+INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout01 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout02 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout03 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout04 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout05 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout06 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout07 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout08 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout09 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating shout10 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement01 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement02 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement03 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement04 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement05 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating announcement06 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer1UserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer1Employer ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer1Authenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer2UserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer2Employer ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating employer2Authenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating worker1UserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating worker1Employer ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating worker1Authenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating job1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating job2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating job3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating job4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating application1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating banner1 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating banner2 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating banner3 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating banner4 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating banner5 ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for shout01.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for shout02.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for shout03.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for shout04.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for shout05.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for shout06.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for shout07.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for shout08.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for shout09.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for shout10.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for announcement01.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for announcement02.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for announcement03.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for announcement04.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for announcement05.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for announcement06.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for employer1UserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for employer1Employer.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for employer1Authenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for employer2UserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for employer2Employer.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 21 for employer2Authenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 22 for worker1UserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 23 for worker1Employer.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 24 for worker1Authenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 25 for job1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 26 for job2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 27 for job3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 28 for job4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 29 for application1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 30 for banner1.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 31 for banner2.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 32 for banner3.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 33 for banner4.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 34 for banner5.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout01 = acme.entities.shouts.Shout{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout02 = acme.entities.shouts.Shout{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.entities.shouts.Shout{id=8, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=9, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout05 = acme.entities.shouts.Shout{id=10, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout06 = acme.entities.shouts.Shout{id=11, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout07 = acme.entities.shouts.Shout{id=12, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout08 = acme.entities.shouts.Shout{id=13, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout09 = acme.entities.shouts.Shout{id=14, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout10 = acme.entities.shouts.Shout{id=15, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement01 = acme.entities.announcements.Announcement{id=16, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement02 = acme.entities.announcements.Announcement{id=17, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement03 = acme.entities.announcements.Announcement{id=18, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement04 = acme.entities.announcements.Announcement{id=19, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement05 = acme.entities.announcements.Announcement{id=20, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting announcement06 = acme.entities.announcements.Announcement{id=21, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer1UserAccount = acme.framework.entities.UserAccount{id=22, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer1Employer = acme.entities.roles.Employer{id=23, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer1Authenticated = acme.framework.entities.Authenticated{id=24, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer2UserAccount = acme.framework.entities.UserAccount{id=25, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer2Employer = acme.entities.roles.Employer{id=26, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting employer2Authenticated = acme.framework.entities.Authenticated{id=27, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting worker1UserAccount = acme.framework.entities.UserAccount{id=28, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting worker1Employer = acme.entities.roles.Worker{id=29, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting worker1Authenticated = acme.framework.entities.Authenticated{id=30, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting job1 = acme.entities.jobs.Job{id=31, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting job2 = acme.entities.jobs.Job{id=32, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting job3 = acme.entities.jobs.Job{id=33, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting job4 = acme.entities.jobs.Job{id=34, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting application1 = acme.entities.jobs.Application{id=35, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting banner1 = acme.entities.banners.Banner{id=36, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting banner2 = acme.entities.banners.Banner{id=37, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting banner3 = acme.entities.banners.Banner{id=38, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting banner4 = acme.entities.banners.Banner{id=39, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting banner5 = acme.entities.banners.Banner{id=40, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiAnonymousShoutController': Unsatisfied dependency expressed through field 'self'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'apiAnonymousShoutController': Unsatisfied dependency expressed through field 'self'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318): Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:225): Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at acme.framework.controllers.AbstractRestController.<init>(AbstractRestController.java:116): java.lang.NullPointerException
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'apiAnonymousShoutController': Unsatisfied dependency expressed through field 'self'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643): Error creating bean with name 'apiAnonymousShoutController': Unsatisfied dependency expressed through field 'self'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318): Error creating bean with name 'abstractRestController' defined in file [C:\Users\Usuario\Desktop\Development\proyects\acme-jobs-react\target\classes\acme\framework\controllers\AbstractRestController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:225): Failed to instantiate [acme.framework.controllers.AbstractRestController]: Constructor threw exception; nested exception is java.lang.NullPointerException
+at acme.framework.controllers.AbstractRestController.<init>(AbstractRestController.java:116): java.lang.NullPointerException

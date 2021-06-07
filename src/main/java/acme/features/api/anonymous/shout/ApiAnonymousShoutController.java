@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import acme.entities.shouts.Shout;
 import acme.framework.controllers.AbstractRestController;
+import acme.framework.entities.Anonymous;
 
 @RestController
 @RequestMapping("/api/anonymous/shout/")
-public class ApiAnonymousShoutController extends AbstractRestController<Shout>{
+public class ApiAnonymousShoutController extends AbstractRestController<Anonymous, Shout>{
 	
 	// Internal state ---------------------------------------------------------
 

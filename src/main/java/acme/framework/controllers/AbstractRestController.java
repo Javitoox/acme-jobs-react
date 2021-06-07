@@ -3,6 +3,7 @@ package acme.framework.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
@@ -14,8 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.GenericTypeResolver;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
@@ -29,19 +32,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import acme.framework.components.HttpMethod;
+import acme.framework.entities.UserRole;
+import acme.framework.helpers.Assert;
 import acme.framework.helpers.HttpMethodHelper;
 import acme.framework.services.AbstractRestService;
 
 @CrossOrigin(origins = MasterController.BASE_URL)
 @RestController
-public class AbstractRestController<E> implements ApplicationContextAware {
+public abstract class AbstractRestController<R extends UserRole, E> implements ApplicationContextAware {
 
 	// Internal state ---------------------------------------------------------
 
 	protected ConfigurableApplicationContext	context;
+	
+	protected Class<R>						roleClazz;
+	protected Class<E>						entityClazz;
+	
+	@Autowired
+	protected AbstractRestController<R, E>		self;
 
 	@Autowired
-	protected AbstractRestService<E>			service;
+	protected AbstractRestService<R, E>			service;
 
 	// ApplicationContextAware interface --------------------------------------
 
@@ -55,7 +66,7 @@ public class AbstractRestController<E> implements ApplicationContextAware {
 
 	// Service management ----------------------------------------------------
 
-	public void setService(final AbstractRestService<E> service) {
+	public void setService(final AbstractRestService<R, E> service) {
 		this.service = service;
 	}
 
@@ -95,14 +106,30 @@ public class AbstractRestController<E> implements ApplicationContextAware {
 
 		return result;
 	}
+	
+	@SuppressWarnings("unchecked")
+	protected AbstractRestController() {
+		Class<?>[] types;
 
+		types = GenericTypeResolver.resolveTypeArguments(this.getClass(), AbstractRestController.class);
+
+		if (types == null || types.length != 2) {
+			System.err.printf("I'm sorry, %s cannot be instantiated.%n", this.getClass().getName());
+			System.err.printf("I can't resolve its generic types.%n");
+			System.exit(1);
+		}
+
+		this.roleClazz = (Class<R>) types[0];
+		this.entityClazz = (Class<E>) types[1];
+	}	
+	
 	@RequestMapping(value = {
 		"/list", "/create"
 	}, method = {
 		RequestMethod.GET, RequestMethod.POST
 	})
 	public ResponseEntity<?> handleRequest(@Valid @RequestBody(required = false) final E entity, final BindingResult result, 
-		final HttpServletRequest servletRequest) {
+		final HttpServletRequest servletRequest, final Authentication authentication, final Locale locale) {
 
 		ResponseEntity<?> response = null;
 
@@ -113,12 +140,14 @@ public class AbstractRestController<E> implements ApplicationContextAware {
 			final String servletMethod = servletRequest.getMethod();
 			final HttpMethod method = HttpMethodHelper.parse(servletMethod);
 
+			Assert.state(this.service.authorise(authentication), locale, "default.error.not-authorised");
+
 			switch (method) {
 			case GET:
-				response = this.list();
+				response = this.self.doGet();
 				break;
 			case POST:
-				response = this.create(entity, result);
+				response = this.self.doPost(entity, result);
 				break;
 			default:
 				response = new ResponseEntity<>("Method not implemented", HttpStatus.NOT_IMPLEMENTED);
@@ -142,24 +171,35 @@ public class AbstractRestController<E> implements ApplicationContextAware {
 			
 			this.startTransaction();
 			this.commitTransaction();
+			
+			response = new ResponseEntity<>("Not authorised", HttpStatus.UNAUTHORIZED);
 		}
 
 		return response;
 	}
-
+	
 	@Transactional(TxType.MANDATORY)
-	private ResponseEntity<?> list() {
+	public ResponseEntity<?> doGet() {
 		return ResponseEntity.ok(this.service.getAll());
 	}
-
+	
 	@Transactional(TxType.MANDATORY)
-	private ResponseEntity<?> create(final E entity, final BindingResult result) {
-		if (result.hasErrors()) {
-			final List<FieldError> errors = new ArrayList<>();
+	public ResponseEntity<?> doPost(final E entity, final BindingResult result) {
+		final List<FieldError> errors = new ArrayList<>(); 
+		this.service.validate(entity, errors);
+		
+		if (result.hasErrors() || !errors.isEmpty()) {
+			final List<FieldError> totalErrors = new ArrayList<>();
+			
 			if (result.hasErrors()) {
-				errors.addAll(result.getFieldErrors());
+				totalErrors.addAll(result.getFieldErrors());
 			}
-			return new ResponseEntity<>(errors, HttpStatus.NON_AUTHORITATIVE_INFORMATION);
+			
+			if(!errors.isEmpty()) {
+				totalErrors.addAll(errors);
+			}
+			
+			return new ResponseEntity<>(totalErrors, HttpStatus.NON_AUTHORITATIVE_INFORMATION);
 		} else {
 			this.service.save(entity);
 			return new ResponseEntity<>("Successful creation", HttpStatus.CREATED);
